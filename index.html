@@ -1,0 +1,33 @@
+<html ng-app="firstApp">
+<head>
+  <title>Hello Angular World!</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller = "FirstCtrl">
+
+  <h1>{{ title }}</h1>
+
+  <p>Hi, this is an {{ "Angular expression" }}.</p>
+  <p>It interpolates stuff, like {{ "strings " +
+  "and simple operators"}}</p>
+  <p>It can even add 2 + 2 to make {{ 2 + 2 }}</p>
+  <p>But unlike an ERB tag, you can't just run any
+  Javascript you want. Trying to use off-the-shelf
+  JS doesn't work, which is why
+  you don't get a random number here: {{ Math.random() }}</p>
+
+  <h3>{{ secondTitle }}</h3>
+  Input your secondTitle:
+  <input type = "text" ng-model="secondTitle">
+
+  <h4>Cat Names</h4>
+  <ul>
+    <li ng-repeat="cat in cats"> {{ cat }}</li>
+  </ul>
+
+</body>
+</html>
